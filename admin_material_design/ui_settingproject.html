@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
+Version: 4.5.2
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Project Management/Project</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="../assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="../assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="../assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/layouts/layout4/css/themes/light.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="../assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+		
+        <!-- END THEME LAYOUT STYLES -->
+        <link rel="shortcut icon" href="favicon.ico" /> 
+
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="../assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
+		
+        
+    </head>
+    <!-- END HEAD -->
+    <style>
+            label {
+                text-align: end;
+            }
+            table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+                    content: '' !important;
+                    background-color: rgba(49, 177, 49, 0);
+            }
+            table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
+                    content: '' !important;
+                    background-color: rgba(49, 177, 49, 0);
+            }
+            .page-header.navbar {
+                background: #690;
+                border-bottom: 1px solid #e9ecf3;
+            }
+            .page-header.navbar .top-menu .navbar-nav>li.dropdown-language>.dropdown-toggle>.langname, .page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>.username, .page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>i {
+                color: #ffffff;
+            }
+            .page-header.navbar .top-menu .navbar-nav>li.dropdown-language>.dropdown-toggle>.langname, .page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>.username, .page-header.navbar .top-menu .navbar-nav>li.dropdown-user.dropdown-dark.open>.dropdown-toggle>i {
+                color: #000000;
+            }
+		
+</style>
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../assets/layouts/layout4/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN PAGE ACTIONS -->
+               
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <!--<form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>-->
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                        
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> Manager Manager </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar9.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="page_user_profile_1.html">
+                                            <i class="icon-user"></i> My Profile </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="page_user_login_1.html">
+                                            <i class="icon-key"></i> Log Out </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                   <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                         <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-user"></i>
+                                <span class="title">บุคลากร</span>
+                              
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-user-secret"></i>
+                                <span class="title">บทบาท</span>
+                               
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-lock"></i>
+                                <span class="title">สิทธฺิ์</span>
+                           
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-cog"></i>
+                                <span class="title">ตั้งค่า</span>
+                               
+                            </a>
+                          
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-bookmark"></i>
+                                <span class="title">ประเภทโครงการ</span>
+                               
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="?p=" class="nav-link nav-toggle">
+                                <i class="fa fa-calendar"></i>
+                                <span class="title">ปฏิทิน</span>
+                                
+                            </a>
+                           
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="ui_project.html" class="nav-link nav-toggle">
+                                <i class="fa fa-users"></i>
+                                <span class="title">ทีม</span>
+                              
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="ui_project.html" class="nav-link nav-toggle">
+                                <i class="fa fa-file"></i>
+                                <span class="title">โครงการ</span>
+                              
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-tasks"></i>
+                                <span class="title">งาน</span>
+                                
+                            </a>
+                            
+                        </li>
+                        
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-thumb-tack"></i>
+                                <span class="title">อนุมัติ</span>
+                                
+                            </a>
+                            
+                        </li>
+                        
+                            
+                       
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+			
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+               
+                    <!-- BEGIN PAGE HEAD-->
+                    <div class="page-head">
+                        <!-- BEGIN PAGE TITLE -->
+						
+						 <div class="page-content">
+						 
+						<div class="tabbable-line boxless tabbable-reversed">
+						<div class="col-md-12" >
+						<div class="page-title">
+                            <h1>ตั้งค่าโครงการ
+                               
+                            </h1>
+                        </div></div>
+						<div class="col-md-12" >
+						<ul class="nav nav-tabs">
+						<li class="active"><a href="#tab_0" data-toggle="tab" aria-expanded="true"> กำหนดประเภท </a></li>
+						<li><a href="#tab_1" data-toggle="tab" > กำหนดสิทธิ์ </a></li>
+						 </ul>
+						</div></div>
+						
+						<div class="tab-content">
+				
+					<div id="tab_0" class="tab-pane active">
+                        <div class="page-toolbar">
+                           
+                        </div>
+                        <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                           
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                   <div class="row">
+                                        <div class="form-group col-md-8">
+										<div class="col-md-4">
+                                            
+											 
+                                            
+                                                <input id="mepEmnNo" name="mepEmnNo" type="text" placeholder="ชื่อ-สกุล" class="form-control input-circle">
+                                       </div><div class="form-group col-md-4"></div>
+											
+											 <div class="form-group col-md-8"><center><h4>กำหนดประเภทพนักงาน</h4></center>
+                                        
+                                        
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <table  width="100%" >
+                                        <thead>
+                                            <tr>
+                                                <th>ชื่อ-นามสกุล</th>
+                                                
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr  height=70>
+                                                
+                                                <td>ประทีป คงกล้า</td>
+											    <td width="15%">
+                                                <select class="form-control" name="delivery" disabled>
+                                                    <option value=""></option>
+                                                    <option value="1" selected>ผู้ดูแลโครงการ</option>
+                                                    <option value="2">ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3">พนักงาน</option>
+                                                </select>
+                                             </td>
+                                              <td width="5%">
+                                              <!-- <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p> -->
+                                                                </td>
+                                            </tr>
+											<tr height=70>
+                                                
+                                                <td>กฤษฎา หมัดอะดัม</td>
+												
+                                                <td width="15%">
+                                                <select class="form-control" name="delivery">
+                                                    <option value=""></option>
+                                                    <option value="1">ผู้ดูแลโครงการ</option>
+                                                    <option value="2" selected>ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3">พนักงาน</option>
+                                                </select>
+                                                <td width="5%">
+                                              <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p></td>
+                                          
+                                               
+                                            </tr>
+											<tr height=70>
+                                                
+                                                <td>สากีริน ขามิ๊</td>
+												
+                                                <td width="15%">
+												
+                                                <select class="form-control" name="delivery">
+                                                    <option value=""></option>
+                                                    <option value="1">ผู้ดูแลโครงการ</option>
+                                                    <option value="2">ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3" selected>พนักงาน</option>
+                                                </select>
+												
+                                               
+                                           </td>
+										   <td width="5%">
+                                              <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p></td>
+																	
+                                            </tr>
+                                            <tr height=70>
+                                                
+                                                <td>อัศม์เดช โส้สมัน</td>
+												
+                                                <td width="15%">
+												
+                                                <select class="form-control" name="delivery">
+                                                    <option value=""></option>
+                                                    <option value="1">ผู้ดูแลโครงการ</option>
+                                                    <option value="2">ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3" selected>พนักงาน</option>
+                                                </select>
+												
+                                               
+                                           </td>
+										   <td width="5%">
+                                              <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p></td>
+																	
+                                            </tr>
+                                            <tr height=70>
+                                                
+                                                <td>นัทธพงศ์ ซุ่นสั้น</td>
+												
+                                                <td width="15%">
+												
+                                                <select class="form-control" name="delivery">
+                                                    <option value=""></option>
+                                                    <option value="1">ผู้ดูแลโครงการ</option>
+                                                    <option value="2">ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3" selected>พนักงาน</option>
+                                                </select>
+												
+                                               
+                                           </td>
+										   <td width="5%">
+                                              <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p></td>
+																	
+                                            </tr>
+                                             <tr height=70>
+                                                
+                                                <td>เจนสันต์ ริยาพันธ์</td>
+												
+                                                <td width="15%">
+												
+                                                <select class="form-control" name="delivery">
+                                                    <option value=""></option>
+                                                    <option value="1">ผู้ดูแลโครงการ</option>
+                                                    <option value="2">ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3" selected>พนักงาน</option>
+                                                </select>
+												
+                                               
+                                           </td>
+										   <td width="5%">
+                                              <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p></td>
+																	
+                                            </tr>
+                                             <tr height=70>
+                                                
+                                                <td>ชัยสิทธิ์ ลิ่มสกุล</td>
+												
+                                                <td width="15%">
+												
+                                                <select class="form-control" name="delivery">
+                                                    <option value=""></option>
+                                                    <option value="1">ผู้ดูแลโครงการ</option>
+                                                    <option value="2">ผู้เยี่ยมชมโครงการ</option>
+                                                    <option value="3" selected>พนักงาน</option>
+                                                </select>
+												
+                                               
+                                           </td>
+										   <td width="5%">
+                                              <p align="center"><a href="javascript:;" class="btn btn-circle btn-icon-only red">
+                                                                        <i class="fa fa-times" style="font-size:20px"></i>
+                                                                    </a></p></td>
+																	
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+									
+									<div class="col-md-12">
+									
+									 <div class="col-md-6">
+									<a href="ui_project.html"><button id="saveEdit" type="button" class="btn green">กลับ</button></a></div>
+									
+									<div class="col-md-6 text-right">
+									
+									<button id="saveEdit" type="button" class="btn green">บันทึก</button></div>
+									
+									</div>
+                                </div>
+                            
+                            
+                        </div>
+                    </div>
+               
+                
+           
+        
+    </div></div></div>
+	    <div id="tab_1" class="tab-pane">
+       
+                        <div class="page-toolbar">
+                           
+                        </div>
+                        
+                    
+                    
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                           
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                     <div class="row">
+                                        <div class="form-group col-md-8">
+										<div class="col-md-4">
+                                            
+											 
+                                            
+                                                <input id="mepEmnNo" name="mepEmnNo" type="text" placeholder="ชื่อ-สกุล" class="form-control input-circle">
+                                         </div><div class="form-group col-md-4"></div>
+											
+											 <div class="form-group col-md-8"><center><h4>กำหนดสิทธิ์พนักงาน</h4></center>
+                                        
+                                        
+                                        </div>
+                                   </div>
+                                </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <table  width="100%" >
+                                        <thead>
+                                            <tr>
+                                                <th>ชื่อ-นามสกุล</th>
+                                             
+                                                
+                                              
+												  
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr height=70>
+                                                <td><p valign="middle">สากีริน ขามิ๊</p></td>
+                                                <td width="5%"><p valign="middle"><a class="btn btn-circle btn-icon-only btn-default" data-toggle="modal" href="#responsive"> <i class="icon-wrench"></i></a> </p></td>
+                                               
+                                            </tr>
+											<tr height=70>
+                                                <td><p valign="middle">อัศม์เดช โส้สมัน</p></td>
+                                                <td width="5%"><p valign="middle"><a class="btn btn-circle btn-icon-only btn-default" data-toggle="modal" href="#responsive"> <i class="icon-wrench"></i></a> </p></td>
+                                            </tr>
+											<tr height=70>
+                                                <td><p valign="middle">นัทธพงศ์ ซุ่นสั้น</p></td>
+                                                <td width="5%"><p valign="middle"><a class="btn btn-circle btn-icon-only btn-default" data-toggle="modal" href="#responsive"> <i class="icon-wrench"></i></a> </p></td>
+                                               
+                                            </tr>
+                                            <tr height=70>
+                                                <td><p valign="middle">เจนสันต์ ริยาพันธ์</p></td>
+                                                <td width="5%"><p valign="middle"><a class="btn btn-circle btn-icon-only btn-default" data-toggle="modal" href="#responsive"> <i class="icon-wrench"></i></a> </p></td>
+                                               
+                                            </tr>
+                                            <tr height=70>
+                                                <td><p valign="middle">ชัยสิทธิ์ ลิ่มสกุล</p></td>
+                                                <td width="5%"><p valign="middle"><a class="btn btn-circle btn-icon-only btn-default" data-toggle="modal" href="#responsive"> <i class="icon-wrench"></i></a> </p></td>
+                                               
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                    <p ><a href="ui_project.html"><button id="saveEdit" type="button" class="btn green">กลับ</button></a></p>
+                                </div>
+                            </div>
+                            <!-- END PORTLET-->
+                        </div>
+                    </div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+    
+	</div>
+                        
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; Metronic by keenthemes.
+                <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+		<!-- /.modal -->
+                                    <div class="modal fade" id="responsive" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                    <h4 class="modal-title">กำหนดสิทธิ์</h4>
+                                                </div>
+												
+
+
+                                        <div class="modal-body">
+                                             <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_3">
+											 <thead><tr>
+											 <th style="text-align:center"><input type="checkbox" name="select-all" id="select-all" /></th>
+											 <th style="text-align:center">ชื่อสิทธิ์</th>
+											 </tr></thead>
+											 <tbody>
+											 <td style="text-align:center"><input type="checkbox" name="checkbox-1" id="checkbox-1" /></td>
+											 <td style="text-align:center">ปิดโครงการ</td>
+											</tbody>
+											<tbody>
+											 <td style="text-align:center"><input type="checkbox" name="checkbox-2" id="checkbox-2" /></td>
+											 <td style="text-align:center">อนุมัติปิดงาน</td>
+											</tbody>
+											<tbody>
+											 <td style="text-align:center"><input type="checkbox" name="checkbox-3" id="checkbox-3" /></td>
+											 <td style="text-align:center">แก้ไขโครงการ</td>
+											</tbody>
+											<tbody>
+											 <td style="text-align:center"><input type="checkbox" name="checkbox-4" id="checkbox-4" /></td>
+											 <td style="text-align:center">ลบโครงการ</td>
+											</tbody>
+											<tbody>
+											 <td style="text-align:center"><input type="checkbox" name="checkbox-5" id="checkbox-5" /></td>
+											 <td style="text-align:center">ตั้งค่าโครงการ</td>
+											</tbody></table>
+								                
+		                                   </div>
+                                                <div class="modal-footer">
+                                               
+                                                    <button type="button" data-dismiss="modal" class="btn green">ยกเลิก</button>
+                                                    <button type="button" data-dismiss="modal" class="btn green" >บันทึก</button>
+                                                
+                                                </div>
+                                          
+                                        </div>
+                                    </div>
+       
+                                    </div></div>
+         <!-- /.modal -->
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+        <!-- BEGIN CORE PLUGINS -->
+        <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="../assets/global/plugins/moment.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="../assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>
+		<script src="../assets/pages/scripts/form-samples.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="../assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>
+        <script src="../assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script>
+        <script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+
+        <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+
+        <script src="../assets/pages/scripts/table-datatables-responsive.js" type="text/javascript"></script>
+        <!-- END THEME LAYOUT SCRIPTS -->
+    </body>
+
+</html>
